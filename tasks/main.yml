@@ -1,0 +1,4 @@
+---
+# tasks file for dns_server
+- include: install.yml
+- include: configure.yml

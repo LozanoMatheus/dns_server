@@ -1,0 +1,9 @@
+---
+- name: Instalando o Servidor DNS
+  apt:
+    pkg: 'bind9'
+    state: 'installed'
+    update_cache: true
+  register: bind9_installed
+  notify:
+  - Start Bind9

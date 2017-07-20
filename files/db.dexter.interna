@@ -1,0 +1,29 @@
+$TTL 1h
+@ IN SOA security.dexter.com.br. root.dexter.com.br. (
+	2016061601 ; serial
+	1h ; refresh
+	15m ; retry
+	1w ; expire
+	1h) ; negative caching TTL
+
+@               IN      NS      security.dexter.com.br.
+@               IN      MX      10 testing.dexter.com.br.
+@               IN      A       192.168.100.101
+
+security	IN	A       192.168.100.101
+devopscenter	IN	A       192.168.100.102
+testing		IN	A	192.168.100.103
+homolog		IN	A	192.168.100.104
+loadbalancer	IN	A	192.168.100.105
+webserver01	IN	A	192.168.100.106
+webserver02	IN	A	192.168.100.107
+database	IN	A	192.168.100.108
+
+
+ansible-server	IN	A       172.18.0.101
+chef-server	IN	A       172.18.0.102
+puppet-server	IN	A       172.18.0.103
+
+mail		IN	A	192.168.100.103
+pop		IN	CNAME	mail
+smtp		IN	CNAME	mail

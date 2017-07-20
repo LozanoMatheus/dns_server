@@ -1,0 +1,14 @@
+---
+# handlers file for dns_server
+#handlers:
+- name: Start Bind9
+  service: name=bind9 state=started
+#    service:
+#      name: 'bind9'
+#      state: 'started'
+- name: Reload Bind9
+  service: name=bind9 state=reloaded
+#    service:
+#      name: 'bind9'
+#      state: 'reloaded'
+...
